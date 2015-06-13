@@ -86,3 +86,8 @@ RUN mkdir -p /etc/my_init.d
 ADD init/setup_graphite.sh /etc/my_init.d/setup_graphite.sh
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Ports
+EXPOSE 80
+EXPOSE 8125/udp
+EXPOSE 8126
